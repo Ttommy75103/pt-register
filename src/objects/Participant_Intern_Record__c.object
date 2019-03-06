@@ -1,0 +1,2494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>ProgramRegistrationTableFields</fullName>
+        <description>Program Registration Form - Existing Registration Table</description>
+        <displayedFields>
+            <field>Program_Descriptor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date_Enrolled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>ProgramRegistrationTableFields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>ProgramRegistrationUpdateFields</fullName>
+        <description>Program Registration Form</description>
+        <displayedFields>
+            <field>Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Withdrawal_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Withdrawal_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Withdrawal_Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>ProgramRegistrationUpdateFields</label>
+    </fieldSets>
+    <fields>
+        <fullName>Afterschool_FY_Reading_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Afterschool FY Reading Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Improved</fullName>
+                    <default>false</default>
+                    <label>Improved</label>
+                </value>
+                <value>
+                    <fullName>Maintained</fullName>
+                    <default>false</default>
+                    <label>Maintained</label>
+                </value>
+                <value>
+                    <fullName>Decreased</fullName>
+                    <default>false</default>
+                    <label>Decreased</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Afterschool_Mid_Reading_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Afterschool Mid Reading Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Improved</fullName>
+                    <default>false</default>
+                    <label>Improved</label>
+                </value>
+                <value>
+                    <fullName>Maintained</fullName>
+                    <default>false</default>
+                    <label>Maintained</label>
+                </value>
+                <value>
+                    <fullName>Decreased</fullName>
+                    <default>false</default>
+                    <label>Decreased</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Americorps_Age_Group_Interns__c</fullName>
+        <externalId>false</externalId>
+        <label>Americorps Age Group (Interns)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0-12</fullName>
+                    <default>false</default>
+                    <label>0-12</label>
+                </value>
+                <value>
+                    <fullName>13-18</fullName>
+                    <default>false</default>
+                    <label>13-18</label>
+                </value>
+                <value>
+                    <fullName>19-30</fullName>
+                    <default>false</default>
+                    <label>19-30</label>
+                </value>
+                <value>
+                    <fullName>31-46</fullName>
+                    <default>false</default>
+                    <label>31-46</label>
+                </value>
+                <value>
+                    <fullName>47-64</fullName>
+                    <default>false</default>
+                    <label>47-64</label>
+                </value>
+                <value>
+                    <fullName>65+</fullName>
+                    <default>false</default>
+                    <label>65+</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Amount_Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount Paid</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Apr_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Apr Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attend_Daily__c</fullName>
+        <externalId>false</externalId>
+        <label>Attend Daily</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Aug_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Aug Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Books_Read__c</fullName>
+        <externalId>false</externalId>
+        <label>Books Read</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Enrolled__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Enrolled</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Dates_Not_Attending__c</fullName>
+        <externalId>false</externalId>
+        <label>Dates Not Attending</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Dec_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Dec Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dec_Value_Aug_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>I_L_Dec_Value__c -  I_L_Aug_Value__c</formula>
+        <label>Dec Value - Aug Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feb_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Feb Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Grade__c</fullName>
+        <externalId>false</externalId>
+        <label>Grade</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>K</fullName>
+                    <default>false</default>
+                    <label>K</label>
+                </value>
+                <value>
+                    <fullName>01</fullName>
+                    <default>false</default>
+                    <label>01</label>
+                </value>
+                <value>
+                    <fullName>02</fullName>
+                    <default>false</default>
+                    <label>02</label>
+                </value>
+                <value>
+                    <fullName>03</fullName>
+                    <default>false</default>
+                    <label>03</label>
+                </value>
+                <value>
+                    <fullName>04</fullName>
+                    <default>false</default>
+                    <label>04</label>
+                </value>
+                <value>
+                    <fullName>05</fullName>
+                    <default>false</default>
+                    <label>05</label>
+                </value>
+                <value>
+                    <fullName>06</fullName>
+                    <default>false</default>
+                    <label>06</label>
+                </value>
+                <value>
+                    <fullName>07</fullName>
+                    <default>false</default>
+                    <label>07</label>
+                </value>
+                <value>
+                    <fullName>08</fullName>
+                    <default>false</default>
+                    <label>08</label>
+                </value>
+                <value>
+                    <fullName>09</fullName>
+                    <default>false</default>
+                    <label>09</label>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>10</label>
+                </value>
+                <value>
+                    <fullName>11</fullName>
+                    <default>false</default>
+                    <label>11</label>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                    <label>12</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_Aug_Color__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. Aug Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DARK BLUE</fullName>
+                    <default>false</default>
+                    <label>DARK BLUE</label>
+                </value>
+                <value>
+                    <fullName>LIGHT BLUE</fullName>
+                    <default>false</default>
+                    <label>LIGHT BLUE</label>
+                </value>
+                <value>
+                    <fullName>GREEN</fullName>
+                    <default>false</default>
+                    <label>GREEN</label>
+                </value>
+                <value>
+                    <fullName>LIGHT GREEN</fullName>
+                    <default>false</default>
+                    <label>LIGHT GREEN</label>
+                </value>
+                <value>
+                    <fullName>YELLOW</fullName>
+                    <default>false</default>
+                    <label>YELLOW</label>
+                </value>
+                <value>
+                    <fullName>PINK</fullName>
+                    <default>false</default>
+                    <label>PINK</label>
+                </value>
+                <value>
+                    <fullName>ORANGE</fullName>
+                    <default>false</default>
+                    <label>ORANGE</label>
+                </value>
+                <value>
+                    <fullName>RED</fullName>
+                    <default>false</default>
+                    <label>RED</label>
+                </value>
+                <value>
+                    <fullName>PURPLE</fullName>
+                    <default>false</default>
+                    <label>PURPLE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_Aug_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+TEXT( I_L_Aug__c ), 
+&quot;BR&quot;,1, 
+&quot;A&quot;, 2, 
+&quot;B&quot;, 3, 
+&quot;C&quot;, 4, 
+&quot;D&quot;, 5, 
+&quot;E&quot;, 6, 
+&quot;F&quot;, 7, 
+&quot;G&quot;, 8, 
+&quot;H&quot;, 9, 
+&quot;I&quot;,10, 
+&quot;J&quot;,11, 
+&quot;K&quot;,12, 
+&quot;L&quot;,13, 
+&quot;M&quot;,14, 
+&quot;N&quot;,15, 
+&quot;O&quot;,16, 
+&quot;P&quot;,17, 
+&quot;Q&quot;,18, 
+&quot;R&quot;,19, 
+&quot;S&quot;,20, 
+&quot;T&quot;,21, 
+&quot;U&quot;,22, 
+&quot;V&quot;,23, 
+&quot;W&quot;,24, 
+&quot;X&quot;,25, 
+&quot;Y&quot;,26, 
+&quot;Z&quot;,27, 
+&quot;Z+&quot;,28, 
+null 
+)</formula>
+        <label>I.L. Aug Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>I_L_Aug__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. Aug</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BR</fullName>
+                    <default>false</default>
+                    <label>BR</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+                <value>
+                    <fullName>D</fullName>
+                    <default>false</default>
+                    <label>D</label>
+                </value>
+                <value>
+                    <fullName>E</fullName>
+                    <default>false</default>
+                    <label>E</label>
+                </value>
+                <value>
+                    <fullName>F</fullName>
+                    <default>false</default>
+                    <label>F</label>
+                </value>
+                <value>
+                    <fullName>G</fullName>
+                    <default>false</default>
+                    <label>G</label>
+                </value>
+                <value>
+                    <fullName>H</fullName>
+                    <default>false</default>
+                    <label>H</label>
+                </value>
+                <value>
+                    <fullName>I</fullName>
+                    <default>false</default>
+                    <label>I</label>
+                </value>
+                <value>
+                    <fullName>J</fullName>
+                    <default>false</default>
+                    <label>J</label>
+                </value>
+                <value>
+                    <fullName>K</fullName>
+                    <default>false</default>
+                    <label>K</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>O</fullName>
+                    <default>false</default>
+                    <label>O</label>
+                </value>
+                <value>
+                    <fullName>P</fullName>
+                    <default>false</default>
+                    <label>P</label>
+                </value>
+                <value>
+                    <fullName>Q</fullName>
+                    <default>false</default>
+                    <label>Q</label>
+                </value>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>U</fullName>
+                    <default>false</default>
+                    <label>U</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>W</fullName>
+                    <default>false</default>
+                    <label>W</label>
+                </value>
+                <value>
+                    <fullName>X</fullName>
+                    <default>false</default>
+                    <label>X</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+                <value>
+                    <fullName>Z</fullName>
+                    <default>false</default>
+                    <label>Z</label>
+                </value>
+                <value>
+                    <fullName>Z+</fullName>
+                    <default>false</default>
+                    <label>Z+</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_Dec_Color__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. Dec Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DARK BLUE</fullName>
+                    <default>false</default>
+                    <label>DARK BLUE</label>
+                </value>
+                <value>
+                    <fullName>LIGHT BLUE</fullName>
+                    <default>false</default>
+                    <label>LIGHT BLUE</label>
+                </value>
+                <value>
+                    <fullName>GREEN</fullName>
+                    <default>false</default>
+                    <label>GREEN</label>
+                </value>
+                <value>
+                    <fullName>LIGHT GREEN</fullName>
+                    <default>false</default>
+                    <label>LIGHT GREEN</label>
+                </value>
+                <value>
+                    <fullName>YELLOW</fullName>
+                    <default>false</default>
+                    <label>YELLOW</label>
+                </value>
+                <value>
+                    <fullName>PINK</fullName>
+                    <default>false</default>
+                    <label>PINK</label>
+                </value>
+                <value>
+                    <fullName>ORANGE</fullName>
+                    <default>false</default>
+                    <label>ORANGE</label>
+                </value>
+                <value>
+                    <fullName>RED</fullName>
+                    <default>false</default>
+                    <label>RED</label>
+                </value>
+                <value>
+                    <fullName>PURPLE</fullName>
+                    <default>false</default>
+                    <label>PURPLE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_Dec_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+TEXT( I_L_Dec__c ), 
+&quot;BR&quot;,1, 
+&quot;A&quot;, 2, 
+&quot;B&quot;, 3, 
+&quot;C&quot;, 4, 
+&quot;D&quot;, 5, 
+&quot;E&quot;, 6, 
+&quot;F&quot;, 7, 
+&quot;G&quot;, 8, 
+&quot;H&quot;, 9, 
+&quot;I&quot;,10, 
+&quot;J&quot;,11, 
+&quot;K&quot;,12, 
+&quot;L&quot;,13, 
+&quot;M&quot;,14, 
+&quot;N&quot;,15, 
+&quot;O&quot;,16, 
+&quot;P&quot;,17, 
+&quot;Q&quot;,18, 
+&quot;R&quot;,19, 
+&quot;S&quot;,20, 
+&quot;T&quot;,21, 
+&quot;U&quot;,22, 
+&quot;V&quot;,23, 
+&quot;W&quot;,24, 
+&quot;X&quot;,25, 
+&quot;Y&quot;,26, 
+&quot;Z&quot;,27, 
+&quot;Z+&quot;,28, 
+null 
+)</formula>
+        <label>I.L. Dec Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>I_L_Dec__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. Dec</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BR</fullName>
+                    <default>false</default>
+                    <label>BR</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+                <value>
+                    <fullName>D</fullName>
+                    <default>false</default>
+                    <label>D</label>
+                </value>
+                <value>
+                    <fullName>E</fullName>
+                    <default>false</default>
+                    <label>E</label>
+                </value>
+                <value>
+                    <fullName>F</fullName>
+                    <default>false</default>
+                    <label>F</label>
+                </value>
+                <value>
+                    <fullName>G</fullName>
+                    <default>false</default>
+                    <label>G</label>
+                </value>
+                <value>
+                    <fullName>H</fullName>
+                    <default>false</default>
+                    <label>H</label>
+                </value>
+                <value>
+                    <fullName>I</fullName>
+                    <default>false</default>
+                    <label>I</label>
+                </value>
+                <value>
+                    <fullName>J</fullName>
+                    <default>false</default>
+                    <label>J</label>
+                </value>
+                <value>
+                    <fullName>K</fullName>
+                    <default>false</default>
+                    <label>K</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>O</fullName>
+                    <default>false</default>
+                    <label>O</label>
+                </value>
+                <value>
+                    <fullName>P</fullName>
+                    <default>false</default>
+                    <label>P</label>
+                </value>
+                <value>
+                    <fullName>Q</fullName>
+                    <default>false</default>
+                    <label>Q</label>
+                </value>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>U</fullName>
+                    <default>false</default>
+                    <label>U</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>W</fullName>
+                    <default>false</default>
+                    <label>W</label>
+                </value>
+                <value>
+                    <fullName>X</fullName>
+                    <default>false</default>
+                    <label>X</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+                <value>
+                    <fullName>Z</fullName>
+                    <default>false</default>
+                    <label>Z</label>
+                </value>
+                <value>
+                    <fullName>Z+</fullName>
+                    <default>false</default>
+                    <label>Z+</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_July_Color__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. July Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>I_L_July__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DARK BLUE                                                       </fullName>
+                    <default>false</default>
+                    <label>DARK BLUE                                                       </label>
+                </value>
+                <value>
+                    <fullName>LIGHT BLUE               </fullName>
+                    <default>false</default>
+                    <label>LIGHT BLUE               </label>
+                </value>
+                <value>
+                    <fullName>GREEN                                   </fullName>
+                    <default>false</default>
+                    <label>GREEN                                   </label>
+                </value>
+                <value>
+                    <fullName>LIGHT GREEN              </fullName>
+                    <default>false</default>
+                    <label>LIGHT GREEN              </label>
+                </value>
+                <value>
+                    <fullName>YELLOW                     </fullName>
+                    <default>false</default>
+                    <label>YELLOW                     </label>
+                </value>
+                <value>
+                    <fullName>PINK                               </fullName>
+                    <default>false</default>
+                    <label>PINK                               </label>
+                </value>
+                <value>
+                    <fullName>ORANGE                        </fullName>
+                    <default>false</default>
+                    <label>ORANGE                        </label>
+                </value>
+                <value>
+                    <fullName>RED                         </fullName>
+                    <default>false</default>
+                    <label>RED                         </label>
+                </value>
+                <value>
+                    <fullName>PURPLE             </fullName>
+                    <default>false</default>
+                    <label>PURPLE             </label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>U</controllingFieldValue>
+                <controllingFieldValue>V</controllingFieldValue>
+                <controllingFieldValue>S</controllingFieldValue>
+                <controllingFieldValue>T</controllingFieldValue>
+                <valueName>RED                         </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>W</controllingFieldValue>
+                <controllingFieldValue>X</controllingFieldValue>
+                <controllingFieldValue>Y</controllingFieldValue>
+                <controllingFieldValue>Z</controllingFieldValue>
+                <controllingFieldValue>Z+</controllingFieldValue>
+                <valueName>PURPLE             </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I</controllingFieldValue>
+                <controllingFieldValue>J</controllingFieldValue>
+                <controllingFieldValue>K</controllingFieldValue>
+                <valueName>LIGHT GREEN              </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>L</controllingFieldValue>
+                <controllingFieldValue>M</controllingFieldValue>
+                <controllingFieldValue>N</controllingFieldValue>
+                <valueName>YELLOW                     </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>O</controllingFieldValue>
+                <controllingFieldValue>P</controllingFieldValue>
+                <valueName>PINK                               </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Q</controllingFieldValue>
+                <controllingFieldValue>R</controllingFieldValue>
+                <valueName>ORANGE                        </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>A</controllingFieldValue>
+                <controllingFieldValue>B</controllingFieldValue>
+                <valueName>DARK BLUE                                                       </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>C</controllingFieldValue>
+                <controllingFieldValue>D</controllingFieldValue>
+                <controllingFieldValue>E</controllingFieldValue>
+                <valueName>LIGHT BLUE               </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>F</controllingFieldValue>
+                <controllingFieldValue>G</controllingFieldValue>
+                <controllingFieldValue>H</controllingFieldValue>
+                <valueName>GREEN                                   </valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_July_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+TEXT( I_L_July__c ), 
+&quot;BR&quot;,1, 
+&quot;A&quot;, 2, 
+&quot;B&quot;, 3, 
+&quot;C&quot;, 4, 
+&quot;D&quot;, 5, 
+&quot;E&quot;, 6, 
+&quot;F&quot;, 7, 
+&quot;G&quot;, 8, 
+&quot;H&quot;, 9, 
+&quot;I&quot;,10, 
+&quot;J&quot;,11, 
+&quot;K&quot;,12, 
+&quot;L&quot;,13, 
+&quot;M&quot;,14, 
+&quot;N&quot;,15, 
+&quot;O&quot;,16, 
+&quot;P&quot;,17, 
+&quot;Q&quot;,18, 
+&quot;R&quot;,19, 
+&quot;S&quot;,20, 
+&quot;T&quot;,21, 
+&quot;U&quot;,22, 
+&quot;V&quot;,23, 
+&quot;W&quot;,24, 
+&quot;X&quot;,25, 
+&quot;Y&quot;,26, 
+&quot;Z&quot;,27, 
+&quot;Z+&quot;,28, 
+null 
+)</formula>
+        <label>I.L. July Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>I_L_July__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. July</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BR</fullName>
+                    <default>false</default>
+                    <label>BR</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+                <value>
+                    <fullName>D</fullName>
+                    <default>false</default>
+                    <label>D</label>
+                </value>
+                <value>
+                    <fullName>E</fullName>
+                    <default>false</default>
+                    <label>E</label>
+                </value>
+                <value>
+                    <fullName>F</fullName>
+                    <default>false</default>
+                    <label>F</label>
+                </value>
+                <value>
+                    <fullName>G</fullName>
+                    <default>false</default>
+                    <label>G</label>
+                </value>
+                <value>
+                    <fullName>H</fullName>
+                    <default>false</default>
+                    <label>H</label>
+                </value>
+                <value>
+                    <fullName>I</fullName>
+                    <default>false</default>
+                    <label>I</label>
+                </value>
+                <value>
+                    <fullName>J</fullName>
+                    <default>false</default>
+                    <label>J</label>
+                </value>
+                <value>
+                    <fullName>K</fullName>
+                    <default>false</default>
+                    <label>K</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>O</fullName>
+                    <default>false</default>
+                    <label>O</label>
+                </value>
+                <value>
+                    <fullName>P</fullName>
+                    <default>false</default>
+                    <label>P</label>
+                </value>
+                <value>
+                    <fullName>Q</fullName>
+                    <default>false</default>
+                    <label>Q</label>
+                </value>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>U</fullName>
+                    <default>false</default>
+                    <label>U</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>W</fullName>
+                    <default>false</default>
+                    <label>W</label>
+                </value>
+                <value>
+                    <fullName>X</fullName>
+                    <default>false</default>
+                    <label>X</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+                <value>
+                    <fullName>Z</fullName>
+                    <default>false</default>
+                    <label>Z</label>
+                </value>
+                <value>
+                    <fullName>Z+</fullName>
+                    <default>false</default>
+                    <label>Z+</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_June_Color__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. June Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>I_L_June__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DARK BLUE                                                       </fullName>
+                    <default>false</default>
+                    <label>DARK BLUE                                                       </label>
+                </value>
+                <value>
+                    <fullName>LIGHT BLUE               </fullName>
+                    <default>false</default>
+                    <label>LIGHT BLUE               </label>
+                </value>
+                <value>
+                    <fullName>GREEN                                   </fullName>
+                    <default>false</default>
+                    <label>GREEN                                   </label>
+                </value>
+                <value>
+                    <fullName>LIGHT GREEN              </fullName>
+                    <default>false</default>
+                    <label>LIGHT GREEN              </label>
+                </value>
+                <value>
+                    <fullName>YELLOW                     </fullName>
+                    <default>false</default>
+                    <label>YELLOW                     </label>
+                </value>
+                <value>
+                    <fullName>PINK                               </fullName>
+                    <default>false</default>
+                    <label>PINK                               </label>
+                </value>
+                <value>
+                    <fullName>ORANGE                        </fullName>
+                    <default>false</default>
+                    <label>ORANGE                        </label>
+                </value>
+                <value>
+                    <fullName>RED                         </fullName>
+                    <default>false</default>
+                    <label>RED                         </label>
+                </value>
+                <value>
+                    <fullName>PURPLE             </fullName>
+                    <default>false</default>
+                    <label>PURPLE             </label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>U</controllingFieldValue>
+                <controllingFieldValue>V</controllingFieldValue>
+                <controllingFieldValue>S</controllingFieldValue>
+                <controllingFieldValue>T</controllingFieldValue>
+                <valueName>RED                         </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>W</controllingFieldValue>
+                <controllingFieldValue>X</controllingFieldValue>
+                <controllingFieldValue>Y</controllingFieldValue>
+                <controllingFieldValue>Z</controllingFieldValue>
+                <controllingFieldValue>Z+</controllingFieldValue>
+                <valueName>PURPLE             </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>I</controllingFieldValue>
+                <controllingFieldValue>J</controllingFieldValue>
+                <controllingFieldValue>K</controllingFieldValue>
+                <valueName>LIGHT GREEN              </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>L</controllingFieldValue>
+                <controllingFieldValue>M</controllingFieldValue>
+                <controllingFieldValue>N</controllingFieldValue>
+                <valueName>YELLOW                     </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>O</controllingFieldValue>
+                <controllingFieldValue>P</controllingFieldValue>
+                <valueName>PINK                               </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Q</controllingFieldValue>
+                <controllingFieldValue>R</controllingFieldValue>
+                <valueName>ORANGE                        </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>A</controllingFieldValue>
+                <controllingFieldValue>B</controllingFieldValue>
+                <valueName>DARK BLUE                                                       </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>C</controllingFieldValue>
+                <controllingFieldValue>D</controllingFieldValue>
+                <controllingFieldValue>E</controllingFieldValue>
+                <valueName>LIGHT BLUE               </valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>F</controllingFieldValue>
+                <controllingFieldValue>G</controllingFieldValue>
+                <controllingFieldValue>H</controllingFieldValue>
+                <valueName>GREEN                                   </valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_June_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+TEXT( I_L_June__c ), 
+&quot;BR&quot;,1, 
+&quot;A&quot;, 2, 
+&quot;B&quot;, 3, 
+&quot;C&quot;, 4, 
+&quot;D&quot;, 5, 
+&quot;E&quot;, 6, 
+&quot;F&quot;, 7, 
+&quot;G&quot;, 8, 
+&quot;H&quot;, 9, 
+&quot;I&quot;,10, 
+&quot;J&quot;,11, 
+&quot;K&quot;,12, 
+&quot;L&quot;,13, 
+&quot;M&quot;,14, 
+&quot;N&quot;,15, 
+&quot;O&quot;,16, 
+&quot;P&quot;,17, 
+&quot;Q&quot;,18, 
+&quot;R&quot;,19, 
+&quot;S&quot;,20, 
+&quot;T&quot;,21, 
+&quot;U&quot;,22, 
+&quot;V&quot;,23, 
+&quot;W&quot;,24, 
+&quot;X&quot;,25, 
+&quot;Y&quot;,26, 
+&quot;Z&quot;,27, 
+&quot;Z+&quot;,28, 
+null 
+)</formula>
+        <label>I.L. June Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>I_L_June__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. June</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BR</fullName>
+                    <default>false</default>
+                    <label>BR</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+                <value>
+                    <fullName>D</fullName>
+                    <default>false</default>
+                    <label>D</label>
+                </value>
+                <value>
+                    <fullName>E</fullName>
+                    <default>false</default>
+                    <label>E</label>
+                </value>
+                <value>
+                    <fullName>F</fullName>
+                    <default>false</default>
+                    <label>F</label>
+                </value>
+                <value>
+                    <fullName>G</fullName>
+                    <default>false</default>
+                    <label>G</label>
+                </value>
+                <value>
+                    <fullName>H</fullName>
+                    <default>false</default>
+                    <label>H</label>
+                </value>
+                <value>
+                    <fullName>I</fullName>
+                    <default>false</default>
+                    <label>I</label>
+                </value>
+                <value>
+                    <fullName>J</fullName>
+                    <default>false</default>
+                    <label>J</label>
+                </value>
+                <value>
+                    <fullName>K</fullName>
+                    <default>false</default>
+                    <label>K</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>O</fullName>
+                    <default>false</default>
+                    <label>O</label>
+                </value>
+                <value>
+                    <fullName>P</fullName>
+                    <default>false</default>
+                    <label>P</label>
+                </value>
+                <value>
+                    <fullName>Q</fullName>
+                    <default>false</default>
+                    <label>Q</label>
+                </value>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>U</fullName>
+                    <default>false</default>
+                    <label>U</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>W</fullName>
+                    <default>false</default>
+                    <label>W</label>
+                </value>
+                <value>
+                    <fullName>X</fullName>
+                    <default>false</default>
+                    <label>X</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+                <value>
+                    <fullName>Z</fullName>
+                    <default>false</default>
+                    <label>Z</label>
+                </value>
+                <value>
+                    <fullName>Z+</fullName>
+                    <default>false</default>
+                    <label>Z+</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_May_Color__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. May Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DARK BLUE</fullName>
+                    <default>false</default>
+                    <label>DARK BLUE</label>
+                </value>
+                <value>
+                    <fullName>LIGHT BLUE</fullName>
+                    <default>false</default>
+                    <label>LIGHT BLUE</label>
+                </value>
+                <value>
+                    <fullName>GREEN</fullName>
+                    <default>false</default>
+                    <label>GREEN</label>
+                </value>
+                <value>
+                    <fullName>LIGHT GREEN</fullName>
+                    <default>false</default>
+                    <label>LIGHT GREEN</label>
+                </value>
+                <value>
+                    <fullName>YELLOW</fullName>
+                    <default>false</default>
+                    <label>YELLOW</label>
+                </value>
+                <value>
+                    <fullName>PINK</fullName>
+                    <default>false</default>
+                    <label>PINK</label>
+                </value>
+                <value>
+                    <fullName>ORANGE</fullName>
+                    <default>false</default>
+                    <label>ORANGE</label>
+                </value>
+                <value>
+                    <fullName>RED</fullName>
+                    <default>false</default>
+                    <label>RED</label>
+                </value>
+                <value>
+                    <fullName>PURPLE</fullName>
+                    <default>false</default>
+                    <label>PURPLE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>I_L_May_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+TEXT( I_L_May__c ), 
+&quot;BR&quot;,1, 
+&quot;A&quot;, 2, 
+&quot;B&quot;, 3, 
+&quot;C&quot;, 4, 
+&quot;D&quot;, 5, 
+&quot;E&quot;, 6, 
+&quot;F&quot;, 7, 
+&quot;G&quot;, 8, 
+&quot;H&quot;, 9, 
+&quot;I&quot;,10, 
+&quot;J&quot;,11, 
+&quot;K&quot;,12, 
+&quot;L&quot;,13, 
+&quot;M&quot;,14, 
+&quot;N&quot;,15, 
+&quot;O&quot;,16, 
+&quot;P&quot;,17, 
+&quot;Q&quot;,18, 
+&quot;R&quot;,19, 
+&quot;S&quot;,20, 
+&quot;T&quot;,21, 
+&quot;U&quot;,22, 
+&quot;V&quot;,23, 
+&quot;W&quot;,24, 
+&quot;X&quot;,25, 
+&quot;Y&quot;,26, 
+&quot;Z&quot;,27, 
+&quot;Z+&quot;,28, 
+null 
+)</formula>
+        <label>I.L. May Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>I_L_May__c</fullName>
+        <externalId>false</externalId>
+        <label>I.L. May</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BR</fullName>
+                    <default>false</default>
+                    <label>BR</label>
+                </value>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+                <value>
+                    <fullName>D</fullName>
+                    <default>false</default>
+                    <label>D</label>
+                </value>
+                <value>
+                    <fullName>E</fullName>
+                    <default>false</default>
+                    <label>E</label>
+                </value>
+                <value>
+                    <fullName>F</fullName>
+                    <default>false</default>
+                    <label>F</label>
+                </value>
+                <value>
+                    <fullName>G</fullName>
+                    <default>false</default>
+                    <label>G</label>
+                </value>
+                <value>
+                    <fullName>H</fullName>
+                    <default>false</default>
+                    <label>H</label>
+                </value>
+                <value>
+                    <fullName>I</fullName>
+                    <default>false</default>
+                    <label>I</label>
+                </value>
+                <value>
+                    <fullName>J</fullName>
+                    <default>false</default>
+                    <label>J</label>
+                </value>
+                <value>
+                    <fullName>K</fullName>
+                    <default>false</default>
+                    <label>K</label>
+                </value>
+                <value>
+                    <fullName>L</fullName>
+                    <default>false</default>
+                    <label>L</label>
+                </value>
+                <value>
+                    <fullName>M</fullName>
+                    <default>false</default>
+                    <label>M</label>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                    <label>N</label>
+                </value>
+                <value>
+                    <fullName>O</fullName>
+                    <default>false</default>
+                    <label>O</label>
+                </value>
+                <value>
+                    <fullName>P</fullName>
+                    <default>false</default>
+                    <label>P</label>
+                </value>
+                <value>
+                    <fullName>Q</fullName>
+                    <default>false</default>
+                    <label>Q</label>
+                </value>
+                <value>
+                    <fullName>R</fullName>
+                    <default>false</default>
+                    <label>R</label>
+                </value>
+                <value>
+                    <fullName>S</fullName>
+                    <default>false</default>
+                    <label>S</label>
+                </value>
+                <value>
+                    <fullName>T</fullName>
+                    <default>false</default>
+                    <label>T</label>
+                </value>
+                <value>
+                    <fullName>U</fullName>
+                    <default>false</default>
+                    <label>U</label>
+                </value>
+                <value>
+                    <fullName>V</fullName>
+                    <default>false</default>
+                    <label>V</label>
+                </value>
+                <value>
+                    <fullName>W</fullName>
+                    <default>false</default>
+                    <label>W</label>
+                </value>
+                <value>
+                    <fullName>X</fullName>
+                    <default>false</default>
+                    <label>X</label>
+                </value>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                    <label>Y</label>
+                </value>
+                <value>
+                    <fullName>Z</fullName>
+                    <default>false</default>
+                    <label>Z</label>
+                </value>
+                <value>
+                    <fullName>Z+</fullName>
+                    <default>false</default>
+                    <label>Z+</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Intern_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Intern Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>General Program Intern</fullName>
+                    <default>false</default>
+                    <label>General Program Intern</label>
+                </value>
+                <value>
+                    <fullName>House Pastor</fullName>
+                    <default>false</default>
+                    <label>House Pastor</label>
+                </value>
+                <value>
+                    <fullName>Program Quality Coach</fullName>
+                    <default>false</default>
+                    <label>Program Quality Coach</label>
+                </value>
+                <value>
+                    <fullName>Reading Coordinator</fullName>
+                    <default>false</default>
+                    <label>Reading Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Reading Curriculum Coordinator</fullName>
+                    <default>false</default>
+                    <label>Reading Curriculum Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Reading Volunteer Coordinator</fullName>
+                    <default>false</default>
+                    <label>Reading Volunteer Coordinator</label>
+                </value>
+                <value>
+                    <fullName>Summer Site Coordinator</fullName>
+                    <default>false</default>
+                    <label>Summer Site Coordinator</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Jan_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Jan Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>July_Value_June_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>I_L_July_Value__c -  I_L_June_Value__c</formula>
+        <label>July Value - June Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Literacy_Nimbus_Enrollment_Exist__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used by flow to prevent duplicate enrollments for Lit_Enrollments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used by flow to prevent duplicate enrollments for Lit_Enrollments.Do not Change</inlineHelpText>
+        <label>Literacy Nimbus Enrollment Exist</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mar_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Mar Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>May_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>May Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>May_Value_Aug_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>I_L_May_Value__c -  I_L_Aug_Value__c</formula>
+        <label>May Value - Aug Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>May_Value_Dec_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>I_L_May_Value__c -  I_L_Dec_Value__c</formula>
+        <label>May Value - Dec Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Words_Learned__c</fullName>
+        <externalId>false</externalId>
+        <label>New Words Learned</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nov_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Nov Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oct_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Oct Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pages_Read__c</fullName>
+        <externalId>false</externalId>
+        <label>Pages Read</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participant_ID18__c</fullName>
+        <externalId>false</externalId>
+        <formula>Participant_Intern__r.ContactID18__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Participant ID18</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participant_Intern__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Participant/Intern</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Participant/Intern Records</relationshipLabel>
+        <relationshipName>Participant_Intern_Records</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Program_AFT_Total_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Days_AFT_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program AFT Total Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Days_AFT_1st_Sem__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Days_AFT_1st_Sem__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Days AFT 1st Sem</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Days_AFT_2nd_Sem__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Days_AFT_2nd_Sem__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Days AFT 2nd Sem</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Days_AFT_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Days_AFT_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Days AFT Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Days_SUM_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Days_SUM_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Days SUM Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Descriptor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Program__r.Program_Descriptor__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Descriptor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Group__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Program__r.Program_Group__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Location__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (Program__r.Program_Location__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (Program__r.Program_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (Program__r.Program_Year__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Participant/Intern Records</relationshipLabel>
+        <relationshipName>Participant_Intern_Records</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Projects_Completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Projects Completed</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reading_Summer_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Reading Summer Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Improved</fullName>
+                    <default>false</default>
+                    <label>Improved</label>
+                </value>
+                <value>
+                    <fullName>Maintained</fullName>
+                    <default>false</default>
+                    <label>Maintained</label>
+                </value>
+                <value>
+                    <fullName>Decreased</fullName>
+                    <default>false</default>
+                    <label>Decreased</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sep_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Sep Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sponsor_Church_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sponsor Church Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Sponsored Intern Records</relationshipLabel>
+        <relationshipName>Participant_Intern_Records</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enrolled</fullName>
+                    <default>false</default>
+                    <label>Enrolled</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Withdrawn</fullName>
+                    <default>false</default>
+                    <label>Withdrawn</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Summer_Attended_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Summer_Days_Attended__c  /  Program_Days_SUM_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Summer Attended Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Summer_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <label>Summer Days Attended</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Summer_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Summer Fee</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Paid in Full</fullName>
+                    <default>false</default>
+                    <label>Paid in Full</label>
+                </value>
+                <value>
+                    <fullName>Partial Payment</fullName>
+                    <default>false</default>
+                    <label>Partial Payment</label>
+                </value>
+                <value>
+                    <fullName>Waived</fullName>
+                    <default>false</default>
+                    <label>Waived</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_AFT_Attended_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_AFT_Days_Attended__c / Program_AFT_Total_Days__c</formula>
+        <label>Total AFT Attended Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_AFT_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <formula>X1st_Sem_Days_Attended__c + X2nd_Sem_Days_Attended__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total AFT Days Attended</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Withdrawal_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Withdrawal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Withdrawal_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Withdrawal Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Withdrawal_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Withdrawal Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Moved</fullName>
+                    <default>false</default>
+                    <label>Moved</label>
+                </value>
+                <value>
+                    <fullName>Illness</fullName>
+                    <default>false</default>
+                    <label>Illness</label>
+                </value>
+                <value>
+                    <fullName>Truancy</fullName>
+                    <default>false</default>
+                    <label>Truancy</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>No Show</fullName>
+                    <default>false</default>
+                    <label>No Show</label>
+                </value>
+                <value>
+                    <fullName>Behavior</fullName>
+                    <default>false</default>
+                    <label>Behavior</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X1st_Sem_Attended_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>X1st_Sem_Days_Attended__c / Program__r.Program_Days_AFT_1st_Sem__c</formula>
+        <label>1st Sem Attended Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X1st_Sem_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <formula>Aug_Days_Attended__c  + Sep_Days_Attended__c + Oct_Days_Attended__c + Nov_Days_Attended__c + Dec_Days_Attended__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>1st Sem Days Attended</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X2nd_Sem_Attended_Pct__c</fullName>
+        <externalId>false</externalId>
+        <formula>X2nd_Sem_Days_Attended__c  /  Program_Days_AFT_2nd_Sem__c</formula>
+        <label>2nd Sem Attended Pct</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X2nd_Sem_Days_Attended__c</fullName>
+        <externalId>false</externalId>
+        <formula>Jan_Days_Attended__c + Feb_Days_Attended__c + Mar_Days_Attended__c + Apr_Days_Attended__c + May_Days_Attended__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>2nd Sem Days Attended</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Participant/Intern Record</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Americorps_Age_Group_Interns__c</columns>
+        <columns>Program_Group__c</columns>
+        <columns>Program_Type__c</columns>
+        <columns>Program_Location__c</columns>
+        <columns>Program_Year__c</columns>
+        <columns>Status__c</columns>
+        <columns>Grade__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Participant</fullName>
+        <columns>NAME</columns>
+        <columns>Program_Location__c</columns>
+        <columns>Summer_Fee__c</columns>
+        <columns>Summer_Days_Attended__c</columns>
+        <columns>Summer_Attended_Pct__c</columns>
+        <columns>Program_Days_SUM_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Program_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Participants 2017</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PRID-{000000}</displayFormat>
+        <label>Participant/Intern Record Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Participant/Intern Records</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,297 @@
+<apex:page showHeader="false" sidebar="false" title="Enrollment" standardController="Contact" extensions="RegistrationController" docType="html-5.0">
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<apex:slds />
+
+    <apex:form html-novalidate="true">
+        <apex:outputPanel layout="block"  id="main">
+            <apex:pageMessages />
+            <apex:outputPanel layout="block" rendered="{!showCompletion=='true'}" styleClass="slds-size_1-of-2 slds-align_absolute-center slds-notify slds-notify_toast slds-theme_success slds-m-top_large">
+                <h1 class="slds-text-heading_large slds-size_1-of-1">Registration Completed!</h1>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" id="contactLookupResults" styleClass="slds-size_1-of-1 slds-grid slds-wrap slds-align_absolute-center slds-p-around--large" rendered="{!selectedContactId==null}">
+                <apex:actionRegion >
+                    <apex:outputPanel layout="block" rendered="{!listContactMatches!= null && listContactMatches.size==0}" id="listNoMatches" styleClass="slds-size_1-of-1 slds-align_absolute-center">
+                        <h1 class="slds-text-heading_large slds-size_1-of-1">No matches found. Try another search, or register as a new participant.</h1>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" rendered="{!listContactMatches!= null && listContactMatches.size>0}" id="listMatchesOP" styleClass="slds-size_1-of-1 slds-align_absolute-center slds-grid slds-wrap">
+                        <h1 class="slds-text-heading_large slds-size_1-of-1 slds-align_absolute-center">Matches based on your Search</h1>
+                        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-size_2-of-3">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationMatchingDisplay}" var="f">
+                                        <th scope="col">
+                                            {!displayLabelMap['Contact'+f]}
+                                        </th>
+                                    </apex:repeat>
+                                    <th/>
+                              </tr>
+                            </thead>
+                            <apex:repeat value="{!listContactMatches}" var="match" id="listMatches">
+                                <tr>
+                                    <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationMatchingDisplay}" var="f">
+                                        <td>
+                                            {!match[f]}
+                                        </td>
+                                    </apex:repeat>
+
+                                    <td>
+                                        <apex:outputPanel rendered="{!match.Participant_Intern_Records__r.size>0}">
+                                            <b>Existing Registration(s)</b><p/>
+                                            <apex:repeat value="{!match.Participant_Intern_Records__r}" var="reg" id="listRegs">
+                                                <apex:repeat value="{!$ObjectType.Participant_Intern_Record__c.FieldSets.ProgramRegistrationTableFields}" var="regField" id="listRegs">
+                                                    <apex:outputPanel rendered="{!regField.type!='date'}">
+                                                        {!reg[regField]}
+                                                    </apex:outputPanel>
+                                                    <apex:outputText value="{0,date,MM/dd/yy}" rendered="{!regField.type=='date'}"> 
+                                                        <apex:param value="{!reg[regField]}" /> 
+                                                    </apex:outputText>
+                                                    <br/>
+                                                </apex:repeat>
+                                                <apex:commandLink id="updateThis" reRender="main" value="Update this registration"
+                                                action="{!contactSelect}" styleClass="slds-button slds-button_brand">
+                                                    <apex:param assignTo="{!selectedContactId}" value="{!match.Id}" name="selectedContactId"/>
+                                                    <apex:param assignTo="{!selectedRegistrationId}" value="{!reg.Id}" name="selectedRegId"/>
+                                                </apex:commandLink>
+                                            </apex:repeat>
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!match.Participant_Intern_Records__r.size==0}">
+                                            <apex:commandLink id="registerWithThis" reRender="main" value="Register"
+                                            action="{!contactSelect}" styleClass="slds-button slds-button_brand">
+                                                <apex:param assignTo="{!selectedContactId}" value="{!match.Id}" name="selectedContactId"/>
+                                            </apex:commandLink> 
+                                        </apex:outputPanel>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </table>
+                        <apex:commandLink id="resetSearch" reRender="main" value="Search Again"
+                                            styleClass="slds-button slds-button_brand slds-size_1-of-1 slds-m-top_xx-large" 
+                                            action="{!resetSearch}" />
+                    </apex:outputPanel>
+                </apex:actionRegion>
+            </apex:outputPanel>
+
+            <apex:outputPanel layout="block" styleClass="slds-size_1-of-1 slds-grid slds-wrap slds-align_absolute-center slds-p-around--large" rendered="{!selectedContactId==null && (listContactMatches== null || (listContactMatches!= null && listContactMatches.size==0))}">
+                <div class="slds-size_5-of-12 slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                    <div class="slds-size_1-of-1 slds-p-around--large">
+                        <h1 class="slds-text-heading_large">Returning Participant?</h1>
+                    </div>
+                    <apex:actionRegion >
+                        <div class="slds-size_3-of-4 slds-grid slds-wrap slds-align_absolute-center">
+                                <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationMatching }" var="f">
+                                    <div class="slds-size_1-of-1 slds-m-horizontal--medium slds-grid slds-wrap">
+                                        <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                            style="font-weight:bold" escape="false" styleClass="slds-m-around--small"/>
+                                        <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-around--small" onkeypress="return searchNow(event);" />
+                                    </div>
+                                </apex:repeat>
+                        </div>
+                        <div class="slds-size_1-of-4 slds-grid slds-wrap slds-p-around--large">
+                            <apex:commandLink action="{!lookupContact}" value="Search" id="lookupContactBtnName"
+                                styleClass="slds-button slds-button_brand" reRender="main"/>
+                        </div>
+                        <apex:actionFunction name="doSearchAF" action="{!lookupContact}" />
+                    </apex:actionRegion>
+                    <div class="slds-size_1-of-1 slds-grid slds-wrap slds-p-around--large">
+                        OR
+                    </div>
+                    <apex:actionRegion >
+                        <div class="slds-size_3-of-4 slds-grid slds-wrap slds-p-around--medium">
+                                <apex:outputLabel style="font-weight:bold" value="PT DID" for="ptDid" styleClass="slds-m-around--medium"/>
+                                <apex:inputText id="ptdid" value="{!ptdid}" styleClass="slds-m-around--medium" onkeypress="return searchNow(event);"/>
+                        </div>
+                        <div class="slds-size_1-of-4 slds-grid slds-wrap slds-p-around--large">
+                            <apex:commandLink action="{!lookupContact}" value="Search" id="lookupContactBtnId"
+                            styleClass="slds-button slds-button_brand" reRender="main"/>
+                        </div>
+                        <apex:actionFunction name="doSearchAF" action="{!lookupContact}" />
+                    </apex:actionRegion>
+                </div>
+                <apex:actionRegion >
+                    <div class="slds-size_5-of-12 slds-align_absolute-center slds-p-around--large slds-card slds-m-around_medium">
+                        <div class="slds-size_2-of-3 slds-p-around--large">
+                            <h1 class="slds-text-heading_large">New Participant?</h1>
+                        </div>
+                        <apex:commandLink id="updateThis" reRender="main" value="Register Now"
+                                            styleClass="slds-button slds-button_brand slds-size_1-of-3">
+                            <apex:param assignTo="{!selectedContactId}" value="New" name="selectedContactId"/>
+                            <apex:param assignTo="{!showCompletion}" value="New" name="false"/>
+                        </apex:commandLink> 
+
+                    </div>
+                </apex:actionRegion>
+            </apex:outputPanel>
+            <apex:outputPanel id="contactEditForm" styleClass="slds-size_1-of-1 slds-grid slds-wrap slds-align_absolute-center slds-p-around--large">
+                <apex:outputPanel rendered="{!selectedContactId!=null}" layout="block" styleClass="slds-grid slds-wrap">
+                   <div class="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Registration Internal Use</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationInternalUse }" var="f">
+                                <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                        style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                </div>
+                                <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-horizontal--small"/>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                    <div class="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Participant Information</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationGeneral }" var="f">
+                                <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                        style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                </div>
+                                <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-horizontal--small"/>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                    <div class="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Emergency Information</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat var="f"
+                            value="{!$ObjectType.Contact.FieldSets.RegistrationEmergency }" >
+                                <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                        style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                </div>
+                                <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-horizontal--small"/>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                    <div class="slds-large-size_1-of-1 slds-medium-size_1-of-1 slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Income Information</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat var="f"
+                            value="{!$ObjectType.Contact.FieldSets.RegistrationIncome }" >
+                                <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                        style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                </div>
+                                <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-horizontal--small"/>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                    <div class="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Parent/Guardian Information</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationParentGuardianInfo }" var="f">
+                                <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                        style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                </div>
+                                <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-horizontal--small"/>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                    <div class="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Registration Consent and Waivers</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat value="{!$ObjectType.Contact.FieldSets.RegistrationConsentandWaivers}" var="f">
+                                <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:outputLabel value="{!displayLabelMap['Contact'+f]}" 
+                                        style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                </div>
+                                <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                    <apex:inputField required="{f.required}" value="{!cont[f]}"  styleClass="slds-m-horizontal--small"/>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                    <!--Create Program Enrollment -->
+                    <apex:outputPanel styleClass="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium" rendered="{!cont.Participant_Intern_Records__r.size==0}">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Choose Program</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-size_2-of-3">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                        <apex:repeat value="{!$ObjectType.Program__c.FieldSets.RegistrationProgramDetails }" var="f">
+                                            <th>{!displayLabelMap['Program__c'+f]}</th>
+                                        </apex:repeat>
+                                        <th/>
+                                    </tr>
+                                </thead>
+                                <apex:repeat value="{!currProgRecords}" var="activeProg" id="listActivePrograms">
+                                    <tr>
+                                        <apex:repeat value="{!$ObjectType.Program__c.FieldSets.RegistrationProgramDetails }" var="f">
+                                            <td>
+                                                <apex:outputField value="{!activeProg[f]}"  styleClass="slds-m-horizontal--small"/>
+                                            </td>
+                                        </apex:repeat>
+                                        <td>
+                                            <apex:commandLink id="updateThis" reRender="main" value="Register" action="{!completeRegistration}"
+                                                                styleClass="slds-button slds-button_brand slds-size_1-of-1">
+                                                <apex:param assignTo="{!selectedContactId}" value="{!selectedContactId}" name="selectedContactId"/>
+                                                <apex:param assignTo="{!selectedProgramId}" value="{!activeProg.Id}" name="selectedProgramId"/>
+                                            </apex:commandLink> 
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </table>
+                        </div>
+                        </apex:outputPanel>
+                    
+                    <!-- Update existing Program Registration -->
+                    <apex:outputPanel styleClass="slds-large-size_1-of-1 slds-medium-size_1-of-1  slds-align_absolute-center slds-grid slds-wrap slds-card slds-m-around_medium" rendered="{!cont.Participant_Intern_Records__r.size>0}">
+                        <h3 class="slds-large-size_1-of-6 slds-small-size_1-of-1 slds-p-around--small slds-text-heading_medium slds-align_absolute-center">Update Current Registration</h3>
+                        <div class="slds-large-size_5-of-6 slds-small-size_1-of-1 slds-p-around--large slds-grid slds-wrap">
+                            <apex:repeat value="{!cont.Participant_Intern_Records__r}" var="activeReg" id="listActiveProgramRegs">
+                                <apex:repeat value="{!$ObjectType.Participant_Intern_Record__c.FieldSets.ProgramRegistrationTableFields }" var="f">
+                                    <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                        <apex:outputLabel value="{!displayLabelMap['Participant_Intern_Record__c'+f]}" style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                    </div>
+                                    <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                        <apex:outputField value="{!activeReg[f]}"  styleClass="slds-m-horizontal--small"/>
+                                    </div>
+                                </apex:repeat>
+                                <apex:repeat var="f"
+                                value="{!$ObjectType.Participant_Intern_Record__c.FieldSets.ProgramRegistrationUpdateFields }" >
+                                                                              <div class="slds-large-size_1-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+                                            <apex:outputLabel value="{!displayLabelMap['Participant_Intern_Record__c'+f]}" style="font-weight:bold" escape="false" styleClass="slds-m-horizontal--small"/>
+                                        </div>
+                                        <div class="slds-large-size_2-of-3 slds-small-size_1-of-1 slds-m-vertical--xx-small">
+
+                                        <apex:inputField value="{!activeReg[f]}"  styleClass="slds-m-horizontal--small"/>
+                                    </div>
+                                </apex:repeat>
+                                    <apex:commandLink id="updateThis" reRender="main" value="Update Registration" action="{!completeRegistration}" styleClass="slds-button slds-button_brand slds-size_1-of-2">
+                                        <apex:param assignTo="{!selectedContactId}" value="{!selectedContactId}" name="selectedContactId"/>
+                                        <apex:param assignTo="{!selectedRegistrationId}" value="{!activeReg.Id}" name="selectedRegistrationId"/>
+                                    </apex:commandLink> 
+                            </apex:repeat>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:commandLink id="resetSearch2" reRender="main" value="Cancel And Return (Changes will be lost!)"
+                        styleClass="slds-button slds-button_destructive slds-size_1-of-4 slds-m-top_xx-large" 
+                        action="{!resetSearch}" />
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>
+
+<script>
+    function searchNow(e){
+        if(e.keyCode==13){
+            if(e.preventDefault){ 
+                e.preventDefault();
+            }
+            else{
+                e.returnValue=false;
+            }
+            doSearchAF();
+        }        
+    }
+</script>
+    
+</apex:page>

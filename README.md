@@ -1,5 +1,5 @@
 # PT_Register
-<a href="https://githubsfdeploy.herokuapp.com?owner=commonteriservices&repo=pt_register">
+<a href="https://githubsfdeploy.herokuapp.com?owner=Ttommy75103&repo=pt-register">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>

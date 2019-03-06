@@ -41,11 +41,13 @@
         <members>Contact.Grade__c</members>
         <members>Contact.Healthy_Habits__c</members>
         <members>Contact.Household_Monthly_Income__c</members>
+        <members>Contact.LeadSource</members>
         <members>Contact.Leave_School__c</members>
         <members>Contact.Medical_Info__c</members>
         <members>Contact.Medicine_Allergies__c</members>
         <members>Contact.Medicine_Allergy_Details__c</members>
         <members>Contact.Number_of_members_in_household__c</members>
+        <members>Contact.PTDID__c</members>
         <members>Contact.PT_Not_State_Licensed__c</members>
         <members>Contact.Parent_Guardian_Email__c</members>
         <members>Contact.Parent_Guardian_First_Name__c</members>
@@ -56,6 +58,8 @@
         <members>Contact.Picture_Name__c</members>
         <members>Contact.Policies_Affirmed__c</members>
         <members>Contact.Primary_Language__c</members>
+        <members>Contact.Race__c</members>
+        <members>Contact.Reading_Program__c</members>
         <members>Contact.Registration_Fee_Paid__c</members>
         <members>Contact.Release_authorized_adults__c</members>
         <members>Contact.School_District__c</members>
@@ -71,6 +75,7 @@
         <name>CustomLabels</name>
     </types>
     <types>
+        <members>Form_Label__mdt</members>
         <members>Participant_Intern_Record__c</members>
         <members>Program__c</members>
         <name>CustomObject</name>

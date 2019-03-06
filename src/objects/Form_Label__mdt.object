@@ -28,4 +28,7 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <label>Form Label</label>
+    <pluralLabel>Form Labels</pluralLabel>
+    <visibility>Public</visibility>
 </CustomObject>
